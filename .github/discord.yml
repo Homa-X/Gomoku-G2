@@ -1,0 +1,15 @@
+name: Discord Bot Notify
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send message to Discord
+        uses: tsickert/discord-webhook@v5
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
+          content: "🚀 Ny kod har pushats till main-branchen!"
