@@ -1,0 +1,29 @@
+.container {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn {
+  border: 1px solid #ddd;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease;
+  font-weight: 600;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.active {
+  background: #f3f4f6;
+  border-color: #bbb;
+}
